@@ -1,3 +1,25 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "http://saxsir.me/"
+languageCode = "ja-jp"
+title = "saxsir.me"
+theme = "hugo-lithium-theme"
+
+[permalinks]
+    post = "/:year/:month/:day/:title/"
+    page = "/:title/"
+
+[[menu.main]]
+    name = "GitHub"
+    url = "https://github.com/saxsir"
+[[menu.main]]
+    name = "Repository"
+    url = "https://github.com/saxsir/saxsir.me"
+[[menu.main]]
+    name = "Twitter"
+    url = "https://twitter.com/saxsir256"
+
+[params]
+    [params.logo]
+    url = "logo.png"
+    width = 50
+    height = 50
+    alt = "Logo"
