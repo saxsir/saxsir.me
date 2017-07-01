@@ -1,5 +1,6 @@
 hugo := $(shell which hugo)
 theme := hugo-lithium-theme
+title :=
 
 help:
 	@more Makefile
@@ -11,7 +12,13 @@ themes/hugo-lithium-theme:
 	git clone git@github.com:jrutheiser/hugo-lithium-theme.git $@
 
 watch:
-	$(hugo) server -w --theme=$(theme)
+	$(hugo) server -w -D --theme=$(theme)
 
 build:
 	$(hugo)
+
+new_post: require-title
+	$(hugo) new post/$(title).md
+
+require-%:
+	$(if ${${*}},,$(error environment variable {$*} is required))
