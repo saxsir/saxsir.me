@@ -1,5 +1,4 @@
 hugo := $(shell which hugo)
-theme := hugo-lithium-theme
 title :=
 
 help:
@@ -12,7 +11,7 @@ themes/hugo-lithium-theme:
 	git clone git@github.com:jrutheiser/hugo-lithium-theme.git $@
 
 watch:
-	$(hugo) server -w -D --theme=$(theme)
+	$(hugo) server -w -D
 
 build:
 	$(hugo)
