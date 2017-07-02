@@ -1,5 +1,7 @@
 hugo := $(shell which hugo)
 title :=
+aws := $(shell which aws)
+bucket := saxsir.me
 
 help:
 	@more Makefile
@@ -21,3 +23,6 @@ new_post: require-title
 
 require-%:
 	$(if ${${*}},,$(error environment variable {$*} is required))
+
+deploy:
+	$(aws) s3 sync --delete ./public s3://$(bucket)
