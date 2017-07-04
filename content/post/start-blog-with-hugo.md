@@ -2,6 +2,8 @@
 title: "hugoでブログをつくる（ローカル開発編）"
 slug: "generate-your-blog-with-hugo"
 date: 2017-07-02T15:12:57+09:00
+tags: ["hugo"]
+categories: ["tech"]
 
 ---
 
