@@ -6,11 +6,11 @@ bucket := saxsir.me
 help:
 	@more Makefile
 
-deps: themes/hugo-lithium-theme
+deps: themes/hugo-xmin
 	which hugo || go get -u -v github.com/gohugoio/hugo
 
-themes/hugo-lithium-theme:
-	git clone git@github.com:jrutheiser/hugo-lithium-theme.git $@
+themes/hugo-xmin:
+	git clone git@github.com:yihui/hugo-xmin.git $@
 
 watch:
 	$(hugo) server -w -D

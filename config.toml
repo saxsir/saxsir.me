@@ -1,25 +1,32 @@
 baseURL = "http://saxsir.me/"
 languageCode = "ja-jp"
 title = "saxsir.me"
-theme = "hugo-lithium-theme"
+theme = "hugo-xmin"
 
 [permalinks]
-    post = "/:year/:month/:day/:title/"
-    page = "/:title/"
+    post = "/post/:year/:month/:day/:title"
 
 [[menu.main]]
-    name = "GitHub"
-    url = "https://github.com/saxsir"
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 2
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+[[menu.main]]
+    name = "Subscribe"
+    url = "/index.xml"
+    weight = 4
 [[menu.main]]
     name = "Repository"
     url = "https://github.com/saxsir/saxsir.me"
-[[menu.main]]
-    name = "Twitter"
-    url = "https://twitter.com/saxsir256"
+    weight = 5
 
 [params]
-    [params.logo]
-    url = "logo.png"
-    width = 50
-    height = 50
-    alt = "Logo"
+    description = ""
+    footer = "&copy; Shohei Sasamoto 2017 | [Github](https://github.com/saxsir) | [Twitter](https://twitter.com/saxsir256)"
